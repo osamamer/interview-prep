@@ -1,4 +1,4 @@
-package Trees;
+package Trees.DFS;
 
 public class TreeNode {
     int val;

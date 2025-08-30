@@ -1,4 +1,4 @@
-package Trees;
+package Trees.DFS;
 
 import java.util.ArrayList;
 import java.util.HashSet;

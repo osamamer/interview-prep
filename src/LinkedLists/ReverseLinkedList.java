@@ -18,10 +18,14 @@ public class ReverseLinkedList {
 
         ListNode prev = null;
         ListNode current = head;
-        while (current != null) {
+        while (current != null) { // In this loop, you only play with one node.
+            // You save its next
             ListNode nextTemp = current.next;
+            // You set its next to point where the previous pointer is pointing
             current.next = prev;
+            // You have previous point to where current points
             prev = current;
+            // You move current forward
             current = nextTemp;
         }
         return prev;
