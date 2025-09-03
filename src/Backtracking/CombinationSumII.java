@@ -26,7 +26,7 @@ public class CombinationSumII {
             }
             current.add(candidates[i]);
             sum += candidates[i];
-            backtrack(candidates, target, i, current, sum);
+            backtrack(candidates, target, i + 1, current, sum);
             current.remove(current.size() - 1); // NOT CANDIDATES[I]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             sum -= candidates[i]; // YOU PASS AN INDEX TO REMOVE, YOU REMOVE A VALUE FROM SUM!!!
         }
