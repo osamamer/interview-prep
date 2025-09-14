@@ -6,7 +6,7 @@ public class KClosestToOrigin {
     public int[][] kClosest(int[][] points, int k) {
         int [][] answer = new int[k][2];
         PriorityQueue<int []> minHeap = new PriorityQueue<>(
-                (a, b) -> distance(a) - distance(b)
+                (a, b) -> distance(a) - distance(b)  // if negative, first parameter goes first.
         );
         for (int [] point : points) {
             minHeap.offer(point);

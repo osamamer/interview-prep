@@ -6,13 +6,13 @@ public class ReverseNMerge {
             return;
         }
         ListNode slow = head, fast = head;
+        // Find the middle
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         } // slow is the middle node
         ListNode second = slow.next;
-        // DISCONNECT THE TWO HALVES!!!
-        slow.next = null;
+        slow.next = null; // DISCONNECT THE TWO HALVES!!!
         // Reverse the second half
         ListNode prev = null, curr = second;
         while (curr != null) {

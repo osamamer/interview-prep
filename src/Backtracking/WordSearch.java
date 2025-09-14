@@ -31,6 +31,6 @@ public class WordSearch {
                 || dfs(board, word, i + 1, row + 1, col);
         // Go in every direction. Remember that this is done separately for every starting position on board.
         board[row][col] = kept; // Undo
-        return found;
+        return found; // When true is found, it's propagated up the call stack and instantly returned because it doesn't check the other ORs.
     }
 }
