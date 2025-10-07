@@ -4,19 +4,19 @@ public class MaxProductSubarray {
     public int maxProduct(int[] nums) {
         if (nums.length == 1)
             return nums[0];
-        int[] greatestProduct = new int[nums.length];
-        int[] leastProduct = new int[nums.length];
-        int maxProd = nums[nums.length - 1];
-        greatestProduct[greatestProduct.length - 1] = nums[nums.length - 1];
-        leastProduct[leastProduct.length - 1] = nums[nums.length - 1];
+        int greatestProduct = nums[0];
+        int leastProduct = nums[0];
+        int max = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            int tempMax = greatestProduct;
+            greatestProduct = Math.max(nums[i], greatestProduct * nums[i]);
+            greatestProduct = Math.max(greatestProduct, leastProduct * nums[i]);
+            leastProduct = Math.min(nums[i], leastProduct * nums[i]);
+            leastProduct = Math.min(leastProduct, tempMax * nums[i]);
 
-        for (int i = nums.length - 2; i >= 0; i--) {
-            greatestProduct[i] = Math.max(nums[i], Math.max(nums[i] * greatestProduct[i+1], nums[i] * leastProduct[i+1]));
-            leastProduct[i] = Math.min(nums[i], Math.min(nums[i] * greatestProduct[i+1], nums[i] * leastProduct[i+1]));
+            max = Math.max(greatestProduct, max);
 
-            maxProd = Math.max(greatestProduct[i], maxProd);
-            maxProd = Math.max(maxProd, leastProduct[i]);
         }
-        return maxProd;
+        return max;
     }
 }
