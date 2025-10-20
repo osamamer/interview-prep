@@ -5,19 +5,15 @@ import java.util.HashMap;
 
 public class TwoSum {
     public static int[] twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> hashMap = new HashMap<>();
-        int [] twoIndices = new int[] {};
+        HashMap<Integer, Integer> numToIndex = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            int remainder = target - nums[i];
-            if (!hashMap.containsKey(remainder)) {
-                hashMap.put(remainder, i);
+            int complement = target - nums[i];
+            if (numToIndex.containsKey(complement)) {
+                return new int[]{numToIndex.get(complement), i};
             }
-            if (hashMap.containsKey(nums[i]) && i != hashMap.get(nums[i])) {
-                twoIndices = new int[]{hashMap.get(nums[i]), i};
-                break;
-            }
+            numToIndex.put(nums[i], i);
         }
-        return twoIndices;
+        return new int[]{};
     }
     public static void Main(String[] args) {
         int [] nums = {2,7,11,15};

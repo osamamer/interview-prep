@@ -19,10 +19,8 @@ public class CombinationSum {
                 return;
             }
             current.add(candidates[i]);
-            sum += candidates[i];
-            backtrack(candidates, target, sum, current, i);
+            backtrack(candidates, target, sum + candidates[i], current, i);
             current.remove(current.size() - 1);
-            sum -= candidates[i];
         }
     }
 }

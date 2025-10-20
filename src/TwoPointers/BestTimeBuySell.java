@@ -1,4 +1,4 @@
-package SlidingWindow;
+package TwoPointers;
 
 public class BestTimeBuySell {
     public static int maxProfit(int[] prices) {

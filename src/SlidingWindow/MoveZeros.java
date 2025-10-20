@@ -1,4 +1,4 @@
-package TwoPointers;
+package SlidingWindow;
 
 public class MoveZeros {
     public void moveZeroes(int[] nums) {
