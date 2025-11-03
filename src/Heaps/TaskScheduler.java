@@ -25,13 +25,13 @@ public class TaskScheduler {
         int idles = 0;
         int nCounter = n;
         int cycles = 0;
-        while (!queue.isEmpty()) {
-            if (queue.peek() != list.getLast()) {
-                queue.poll();
-                cycles++;
-                continue;
-            }
-        }
+//        while (!queue.isEmpty()) {
+//            if (queue.peek() != list.getLast()) {
+//                queue.poll();
+//                cycles++;
+//                continue;
+//            }
+//        }
         return 0;
     }
 }

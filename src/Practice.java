@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Practice {
     public double findMaxAverage(int[] nums, int k) {
@@ -22,5 +21,20 @@ public class Practice {
             r++;
         }
         return maxAverage;
+    }
+    public void practiceMethod(int i) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("", "");
+        List<Double> list = new ArrayList<>();
+//        list.add(1);
+//        list.add(2);
+        Collections.sort(list);
+        int[] arr = new int[5];
+        List<Integer> lisy= new ArrayList<>(List.of(3, 1, 2, 4));
+        String s = "";
+        StringBuilder sb = new StringBuilder();
+        sb.append('s');
+        s = sb.toString();
+        list.sort(( a,  b) -> Double.compare(b, a));
     }
 }

@@ -21,4 +21,7 @@ public class DecodeString {
         }
         return outBuilder.toString();
     }
+    public String decodeExpression(String s) {
+        return "";
+    }
 }

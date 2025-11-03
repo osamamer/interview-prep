@@ -25,7 +25,7 @@ public class CombinationSumIII {
             current.add(i);
             backtrack(k, n, sum, current, start + 1);
             sum -= i;
-            current.removeLast();
+//            current.removeLast();
         }
     }
 }
